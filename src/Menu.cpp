@@ -25,7 +25,7 @@ void Menu::displayMenu() const {
 }
 
 void Menu::handleUserInput() {
-    std::string userChoice;
+    string userChoice;
     do {
         cout << "\nMenu:\n";
         displayMenu();
