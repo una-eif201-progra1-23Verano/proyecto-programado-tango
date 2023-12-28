@@ -10,7 +10,7 @@ Menu() : head(nullptr) {
     clear();
 }
 
-void insertOption(const std::string& opt) {
+void insertOption(const string& opt) {
     Node* newNode = new Node{opt, head};
     head = newNode;
 }
@@ -18,7 +18,7 @@ void insertOption(const std::string& opt) {
 void displayMenu() const {
     Node* current = head;
     while (current != nullptr) {
-       cout << current->option << std::endl;
+       cout << current->option << endl;
         current = current->next;
     }
 }
@@ -41,7 +41,7 @@ void handleUserInput() {
 
 void handleOption(const std::string& opt) {
     if (opt == "students administration") {
-        cout << "students administration" << std::endl;
+        cout << "students administration" << endl;
     } 
 }
 
