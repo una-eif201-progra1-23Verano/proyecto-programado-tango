@@ -3,12 +3,14 @@
 //
 #include <iostream>
 #include <cstdlib>
+#include "Menu.h"
 
 int main() {
     system("clear");
     std::cout << "Universidad Nacional de Costa Rica - www.mikeguzman.dev" << std::endl;
 
+    Menu menu;
+    menu.handleUserInput();
 
-    std::cout << std::endl;
     return 0;
 }
