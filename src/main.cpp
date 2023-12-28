@@ -4,31 +4,6 @@
 #include <iostream>
 #include <cstdlib>
 
-/*!
- * \mainpage Technical documentation of the example.
- * \section buildingproject Building the Project
- *
- * \subsection step1 Creating a Build Directory
- *
- * It's a good practice to do an out-of-source build. This keeps your build files separate from your source files.
- * \code{.sh}
- * mkdir build
- * cd build
- * \endcode
- * \subsection step2 Running CMake
- * From within the build directory, run CMake to generate the build system.
- *
- * \code{.sh}
- * cmake ..
- * \endcode
- *
- * \subsection step3 Compiling the Project
- * After CMake has done its job, you can use the generated build system to compile the project.
- *
- * \code{.sh}
- * make
- * \endcode
- * This will compile your project and generate an executable in the build directory.
  *
  * \section references References
  *
