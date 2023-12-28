@@ -3,8 +3,7 @@
 
 Menu::Menu() : head(nullptr) {
     insertOption("Exit");
-   
-    insertOption("opt1");
+    insertOption("students administration");
 }
 
 Menu::~Menu() {
@@ -41,13 +40,10 @@ void Menu::handleUserInput() {
 }
 
 void Menu::handleOption(const std::string& opt) {
-    if (opt == "opt1") {
-        std::cout << "Option 1 selected" << std::endl;
+    if (opt == "students administration") {
+        std::cout << "students administration" << std::endl;
         // Implement option 1 functionality
-    } else if (opt == "opt2") {
-        std::cout << "Option 2 selected" << std::endl;
-        // Implement option 2 functionality
-    }
+    } 
 }
 
 void Menu::clear() {
