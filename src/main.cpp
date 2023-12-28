@@ -4,7 +4,7 @@
 #include <iostream>
 #include <cstdlib>
 #include "Menu.h"
-using namespace;
+using namespace std;
 int main() {
     system("clear");
     cout << "Universidad Nacional de Costa Rica - www.mikeguzman.dev" << endl;
