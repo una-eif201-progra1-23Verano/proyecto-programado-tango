@@ -39,7 +39,7 @@ void handleUserInput() {
     } while (userChoice != "Exit");
 }
 
-void handleOption(const std::string& opt) {
+void handleOption(const string& opt) {
     if (opt == "students administration") {
         cout << "students administration" << endl;
     } 
