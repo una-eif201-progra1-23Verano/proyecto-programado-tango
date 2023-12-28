@@ -5,6 +5,7 @@
 #include <cstdlib>
 #include "Menu.h"
 using namespace std;
+
 int main() {
     system("clear");
     cout << "Universidad Nacional de Costa Rica - www.mikeguzman.dev" << endl;
