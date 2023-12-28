@@ -1,35 +1,36 @@
 #include "Menu.h"
 #include <iostream>
 using namespace std;
-Menu() : head(nullptr) {
+
+Menu::Menu() : head(nullptr) {
     insertOption("Exit");
-    insertOption("students administration");
+    insertOption("opt1");
 }
 
-~Menu() {
+Menu::~Menu() {
     clear();
 }
 
-void insertOption(const string& opt) {
+void Menu::insertOption(const string& opt) {
     Node* newNode = new Node{opt, head};
     head = newNode;
 }
 
-void displayMenu() const {
+void Menu::displayMenu() const {
     Node* current = head;
     while (current != nullptr) {
-       cout << current->option << endl;
+        cout << current->option << endl;
         current = current->next;
     }
 }
 
-void handleUserInput() {
-   string userChoice;
+void Menu::handleUserInput() {
+    std::string userChoice;
     do {
         cout << "\nMenu:\n";
         displayMenu();
 
-       cout << "\nEnter your choice: ";
+        cout << "\nEnter your choice: ";
         cin >> userChoice;
 
         if (userChoice != "Exit") {
@@ -39,13 +40,14 @@ void handleUserInput() {
     } while (userChoice != "Exit");
 }
 
-void handleOption(const string& opt) {
-    if (opt == "students administration") {
-        cout << "students administration" << endl;
-    } 
+void Menu::handleOption(const string& opt) {
+    if (opt == "opt1") {
+        cout << "Option 1 selected" <<endl;
+        // Implement option 1 functionality
+    }
 }
 
-void clear() {
+void Menu::clear() {
     Node* current = head;
     while (current != nullptr) {
         Node* next = current->next;
