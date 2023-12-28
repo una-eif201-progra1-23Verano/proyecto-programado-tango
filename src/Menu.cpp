@@ -3,7 +3,7 @@
 
 Menu::Menu() : head(nullptr) {
     insertOption("Exit");
-    insertOption("opt2");
+   
     insertOption("opt1");
 }
 
