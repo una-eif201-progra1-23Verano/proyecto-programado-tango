@@ -4,10 +4,10 @@
 #include <iostream>
 #include <cstdlib>
 #include "Menu.h"
-
+using namespace;
 int main() {
     system("clear");
-    std::cout << "Universidad Nacional de Costa Rica - www.mikeguzman.dev" << std::endl;
+    cout << "Universidad Nacional de Costa Rica - www.mikeguzman.dev" << endl;
 
     Menu menu;
     menu.handleUserInput();
