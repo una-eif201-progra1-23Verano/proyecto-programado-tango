@@ -1,6 +1,3 @@
-//
-// Created by Maikol Guzman on 22/11/23.
-//
 #include <iostream>
 #include <cstdlib>
 #include "Menu.h"
@@ -8,7 +5,7 @@ using namespace std;
 
 int main() {
     system("clear");
-    cout << "Universidad Nacional de Costa Rica - www.mikeguzman.dev" << endl;
+    cout << "Universidad Nacional de Costa Rica" << endl;
 
     Menu menu;
     menu.handleUserInput();
