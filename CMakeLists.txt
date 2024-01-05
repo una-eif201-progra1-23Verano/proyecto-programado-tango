@@ -23,7 +23,7 @@ file(GLOB SRC src/*.cpp include/*.h)    # Add source files
 add_executable(main ${SRC}
         src/Student.cpp
         include/Student.h
-        "src/intento de push}.cpp")             # Add executable
+)             # Add executable
 
 # Copy compile_commands.json to project root
 add_custom_target(
