@@ -6,12 +6,11 @@
 
 Student::Student() {}
 
+Student::Student(int id, const string &name, const string &carrera) : id(id), name(name), carrera(carrera) {}
+
 Student::~Student() {
 
 }
-
-Student::Student(int id, const string &name, const string &carrera) : id(id), name(name), carrera(carrera) {}
-
 int Student::getId() const {
     return id;
 }
