@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    system("clear");
+    system("cls");
     cout << "Universidad Nacional de Costa Rica" << endl;
 
     Menu menu;
