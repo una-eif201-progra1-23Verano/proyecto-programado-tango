@@ -16,7 +16,7 @@ LinkedList::~LinkedList(){
 }
 
 void LinkedList::newStudent(Student student) {
-    Node* n_Node= new Node(Student);
+    Node* n_Node= new Node(student);
     n_Node -> next = header;
     header = n_Node;
 

@@ -29,7 +29,7 @@ public:
     const string &getMajor() const;
     void setMajor(const string &p_major);
 
-
+    string toString();
 };
 
 

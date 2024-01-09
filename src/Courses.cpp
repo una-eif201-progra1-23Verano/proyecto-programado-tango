@@ -41,3 +41,8 @@ const string &Courses::getCourseCode() const {
 void Courses::setCourseCode(const string &p_courseCode) {
     Courses::courseCode = p_courseCode;
 }
+string Courses::toString(){
+    stringstream s;
+    s<< "Course: "<<courseName<<endl<<"NCR: "<<courseCode<<endl<<"Grade: "<<grades<<endl;
+    return s.str();
+}
