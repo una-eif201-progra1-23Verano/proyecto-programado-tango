@@ -10,7 +10,7 @@ int main() {
 
    /* Menu menu;
     menu.handleUserInput();*/
-
+//bg
     Student student1(15, "Bryan", "Informatica");
     std::cout << student1.toString();
     Courses course1("Calculo",100,"4184");
