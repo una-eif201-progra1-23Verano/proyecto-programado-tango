@@ -2,7 +2,7 @@
 #include "Menu.h"
 #include "Student.h"
 using namespace std;
-//Probando a ver
+//Probando a ver parte 2
 int main() {
     system("cls");
     cout << "Universidad Nacional de Costa Rica" << endl;
