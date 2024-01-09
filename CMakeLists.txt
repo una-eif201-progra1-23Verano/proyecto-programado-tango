@@ -25,8 +25,6 @@ add_executable(main ${SRC}
         include/Student.h
         src/Courses.cpp
         include/Courses.h
-        src/ManagerGrades.cpp
-        include/ManagerGrades.h
         src/ManagerStudents.cpp
         include/ManagerStudents.h
         src/ManagerCourses.cpp
