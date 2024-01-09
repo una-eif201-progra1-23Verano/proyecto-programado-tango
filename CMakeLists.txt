@@ -23,8 +23,6 @@ file(GLOB SRC src/*.cpp include/*.h)    # Add source files
 add_executable(main ${SRC}
         src/Student.cpp
         include/Student.h
-        src/Grades.cpp
-        include/Grades.h
         src/Courses.cpp
         include/Courses.h
         src/ManagerGrades.cpp
