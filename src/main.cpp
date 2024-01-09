@@ -4,7 +4,7 @@
 #include "Courses.h"
 
 using namespace std;
-
+//Probando a ver parte 2
 int main() {
     system("cls");
     cout << "Universidad Nacional de Costa Rica" << endl;
