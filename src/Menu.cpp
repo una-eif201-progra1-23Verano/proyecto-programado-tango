@@ -42,7 +42,11 @@ void Menu::handleUserInput() {
 
 void Menu::handleOption(const string& opt) {
     if (opt == "opt1") {
-        cout << "Option 1 selected" <<endl;
+        int op;
+        cin>>op;
+        switch (op) {
+            
+        }
     }
 }
 

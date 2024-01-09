@@ -23,6 +23,16 @@ file(GLOB SRC src/*.cpp include/*.h)    # Add source files
 add_executable(main ${SRC}
         src/Student.cpp
         include/Student.h
+        src/Grades.cpp
+        include/Grades.h
+        src/Courses.cpp
+        include/Courses.h
+        src/ManagerGrades.cpp
+        include/ManagerGrades.h
+        src/ManagerStudents.cpp
+        include/ManagerStudents.h
+        src/ManagerCourses.cpp
+        include/ManagerCourses.h
 )             # Add executable
 
 # Copy compile_commands.json to project root
