@@ -4,7 +4,9 @@
 
 #ifndef MAIN_MANAGERCOURSES_H
 #define MAIN_MANAGERCOURSES_H
-
+#include <iostream>
+#include <sstream>
+using namespace std;
 
 class ManagerCourses {
 private:
