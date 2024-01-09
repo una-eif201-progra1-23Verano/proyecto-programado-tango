@@ -1,4 +1,5 @@
 #include <string>
+#include <sstream>
 
 /*!
  * \class Menu
@@ -17,7 +18,6 @@ private:
         std::string option;
         Node* next;
     };
-
     Node* head;
 
     void insertOption(const std::string& opt);

@@ -39,3 +39,9 @@ const string &Student::getMajor() const {
 void Student::setMajor(const string &p_major) {
     major = p_major;
 }
+
+string Student::toString() {
+    stringstream s;
+    s<<"Name: "<<name<<endl<<"ID: "<<id<<endl<<"Major: "<<major<<endl;
+    return  s.str();
+}

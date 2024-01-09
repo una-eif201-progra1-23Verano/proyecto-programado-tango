@@ -5,7 +5,7 @@
 #ifndef MAIN_COURSES_H
 #define MAIN_COURSES_H
 #include <iostream>
-#include <string>
+#include <sstream>
 using namespace std;
 
 class Courses {
@@ -30,6 +30,7 @@ public:
     const string &getCourseCode() const;
 
     void setCourseCode(const string &courseCode);
+    string toString();
 };
 
 
