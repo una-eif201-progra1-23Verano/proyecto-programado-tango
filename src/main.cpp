@@ -12,8 +12,8 @@ int main() {
     menu.handleUserInput();
 */
     Student student1(15, "Bryan", "Informatica");
-    std::cout << "ID: " << student1.getId() << ", Name: " << student1.getName() << ", Carrera: " << student1.getMajor() << std::endl;
+    std::cout << student1.toString();
     Courses course1("Calculo",100,"4184");
-    cout<<course1.getCourseName()<<" "<<course1.getGrades()<<" "<<course1.getCourseCode();
+    cout<<course1.toString();
     return 0;
 }
