@@ -3,3 +3,28 @@
 //
 
 #include "ManagerStudents.h"
+
+using namespace std;
+LinkedList::~LinkedList(){
+    Node* actual = header;
+    while(actual != nullptr){
+        Node* next = actual->next;
+
+        delete actual;
+        actual=next;
+    }
+}
+
+void LinkedList::newStudent(Student student) {
+    Node* n_Node= new Node(Student);
+    n_Node -> next = header;
+    header = n_Node;
+
+}
+void LinkedList::showList() const {
+    Node* actual= header;
+    while (actual != header){
+        cout<<"Name: "<<actual->info.getName()<<endl;
+        cout<<"Age: "<<actual->info.getId()<<endl;
+    }
+}

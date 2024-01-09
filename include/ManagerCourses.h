@@ -7,6 +7,9 @@
 
 
 class ManagerCourses {
+private:
+
+public:
 
 };
 
