@@ -1,36 +1,41 @@
-//
-// Created by Ender on 4/1/2024.
-//
-
+// Student.cpp
 #include "Student.h"
 
-Student::Student() {}
+// Default constructor
+Student::Student() : id(0), name(""), major("") {}
 
-Student::Student(int id, const string &name, const string &carrera) : id(id), name(name), carrera(carrera) {}
+// Parameterized constructor
+Student::Student(int p_id, const string &p_name, const string &p_major) : id(p_id), name(p_name), major(p_major) {}
 
-Student::~Student() {
+// Destructor
+Student::~Student() {}
 
-}
+// Getter function for ID
 int Student::getId() const {
     return id;
 }
 
+// Setter function for ID
 void Student::setId(int p_id) {
-    Student::id = p_id;
+    id = p_id;
 }
 
+// Getter function for name
 const string &Student::getName() const {
     return name;
 }
 
+// Setter function for name
 void Student::setName(const string &p_name) {
-    Student::name = p_name;
+    name = p_name;
 }
 
-const string &Student::getCarrera() const {
-    return carrera;
+// Getter function for major
+const string &Student::getMajor() const {
+    return major;
 }
 
-void Student::setCarrera(const string &p_carrera) {
-    Student::carrera = p_carrera;
+// Setter function for major
+void Student::setMajor(const string &p_major) {
+    major = p_major;
 }

@@ -12,24 +12,26 @@ class Student {
 private:
    int id;
    string name;
-   string carrera;
+   string major;
+
 public:
     Student();
-    Student(int p_id, const string &p_name, const string &p_carrera);
-    virtual ~Student();
+    Student(int p_id, const string &p_name, const string &p_major);
+
+    ~Student();
 
     int getId() const;
-
     void setId(int p_id);
 
     const string &getName() const;
-
     void setName(const string &p_name);
 
-    const string &getCarrera() const;
+    const string &getMajor() const;
+    void setMajor(const string &p_major);
 
-    void setCarrera(const string &p_carrera);
+
 };
+
 
 
 #endif //MAIN_STUDENT_H
