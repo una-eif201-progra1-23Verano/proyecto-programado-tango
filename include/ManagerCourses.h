@@ -13,7 +13,7 @@ using namespace std;
         Node* next;
       Node(Student student): info(courses), next(nullptr){}
     }; 
-Node* head;
+class LinkedList{
 class ManagerCourses {
 private:
 
