@@ -6,15 +6,16 @@
 #define MAIN_MANAGERCOURSES_H
 #include <iostream>
 #include <sstream>
+#include "Courses.h"
 using namespace std;
-
-class ManagerCourses {
-private:
-   struct Node {
+ struct Node {
         string option;
         Node* next;
-    };
-    Node* head;
+    }; 
+Node* head;
+class ManagerCourses {
+private:
+
 public:
 ManagerCourses();
 ~ManagerCourses();
