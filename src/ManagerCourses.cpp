@@ -3,7 +3,13 @@
 //
 
 #include "ManagerCourses.h"
-
+ManagerCourses::ManagerCourses() {
+    head= nullptr;
+    actual= nullptr;
+}
+void ManagerCourses::insertStudent(Courses *course) {
+    actual=head
+}
 
 
 
