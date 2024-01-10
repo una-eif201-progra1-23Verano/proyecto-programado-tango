@@ -9,15 +9,18 @@
 using namespace std;
 
 class ManagerCourses {
+public:
+ManagerCourses(){}
+~ManagerCourses(){}
+
+};
 private:
    struct Node {
         string option;
         Node* next;
     };
     Node* head;
-public:
 
-};
 
 
 #endif //MAIN_MANAGERCOURSES_H
