@@ -28,11 +28,27 @@ void ManagerCourses::insertCourse(Courses *course) {
 
     }
 }
-bool deleteByCode(string code){
+bool deleteByCode(string code) {
     string codeToDelete;
     if(codeToDelete== code){
         code= "null " ;
     }
 }
+string ManagerCourses:: findByCode(string code){
+    stringstream s;
+    actual=head;
+
+    while(head != nullptr){
+        Courses *CourseInfo = dynamic_cast<Courses*>(head-> &getCourseCode());
+        if(CourseInfo && CourseInfo-> getCourseCode() == code){
+
+            s<<CourseInfo->;
+        }
+    }
+
+}
+
+
+
 
 
