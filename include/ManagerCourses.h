@@ -10,7 +10,11 @@ using namespace std;
 
 class ManagerCourses {
 private:
-
+   struct Node {
+        string option;
+        Node* next;
+    };
+    Node* head;
 public:
 
 };
