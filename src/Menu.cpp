@@ -44,7 +44,7 @@ void Menu::handleUserInput() {
 void Menu::handleOption(const string& opt) {
     if (opt == "1") {
         int op;
-        cout<<"Student Administration"<<endl
+        cout<<endl<<"Student Administration"<<endl
         <<"1.Search Student"<<endl
         <<"2. Enter new student"<<endl
         <<"3.Display all the students"<<endl
@@ -53,21 +53,32 @@ void Menu::handleOption(const string& opt) {
         cin>>op;
         switch (op) {
             case 1:
+                cout<<"hola";
                 //administrar estudiantes
                 //mostrar el promedio(metodo para calcularlo con las notas de los cursos)
                 //hacer if para las dos opciones (actualizar nota curso y mostrar info)
-                break;
+                int subop;
+                cin>>subop;
+                if(subop==1)
+                    cout<<"hola";
+                else if(subop==2)
+                    cout<<"Hola";
+                    break;
             case 2:
                 //meter nuevo estudiante (nombre, cedula y carrera)
+                cout<<"hola";
                 break;
             case 3:
                 //mostrar estudiantes(toString)
+                cout<<"hola";
                 break;
             case 4:
                 //eliminar estudiantes(metodo eliminar)
+                cout<<"hola";
             break;
             case 5:
                 //salir
+                cout<<"hola";
                 break;
             default:
                 cout<<"Invalid input"<<endl;
