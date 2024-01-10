@@ -13,6 +13,19 @@ private:
     int id;
     string name;
 public:
+    Person();
+
+    Person(int id, const string &name);
+
+    virtual ~Person();
+
+    int getId() const;
+
+    void setId(int id);
+
+    const string &getName() const;
+
+    void setName(const string &name);
 };
 
 
