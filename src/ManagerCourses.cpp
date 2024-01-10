@@ -8,7 +8,10 @@ ManagerCourses::ManagerCourses() {
     actual= nullptr;
 }
 void ManagerCourses::insertStudent(Courses *course) {
-    actual=head
+    actual=head;
+    if(head== nullptr){
+        head=new ManagerCourses
+    }
 }
 
 

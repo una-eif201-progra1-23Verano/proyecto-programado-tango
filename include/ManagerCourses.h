@@ -12,9 +12,9 @@ class ManagerCourses {
     public:
         ManagerCourses();
         ~ManagerCourses();
-        void insertStudent(Courses* course);
-        string findByID(string id);
-        bool deleteByID(string id);
+        void insertCourse(Courses* course);
+        string findByCode(string code);
+        bool deleteByCode(string code);
         string toString();
 
 
