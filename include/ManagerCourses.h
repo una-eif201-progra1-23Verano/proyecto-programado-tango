@@ -4,21 +4,24 @@
 
 #ifndef MAIN_MANAGERCOURSES_H
 #define MAIN_MANAGERCOURSES_H
-#include <iostream>
-#include <sstream>
+#include "Courses.h"
 using namespace std;
-
-class ManagerCourses {
-private:
-   struct Node {
-        string option;
+ struct Node {
+       Courses info;
         Node* next;
-    };
-    Node* head;
-public:
-ManagerCourses();
-~ManagerCourses();
+      Node(Courses courses): info(courses), next(nullptr){}
+  private:
+    Node* header;
 
+public:
+    LinkedList() : header(nullptr){}
+    ~LinkedList();
+
+    void newCourses(Courses courses);
+    void showList() const;
+};
+class LinkedList{
+class ManagerCourses {
 };
 
 
