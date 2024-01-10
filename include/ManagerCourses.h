@@ -10,8 +10,8 @@ using namespace std;
 
 class ManagerCourses {
 public:
-ManagerCourses(){}
-~ManagerCourses(){}
+ManagerCourses();
+~ManagerCourses();
 
 };
 private:
