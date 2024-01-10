@@ -4,8 +4,6 @@
 
 #ifndef MAIN_MANAGERCOURSES_H
 #define MAIN_MANAGERCOURSES_H
-#include <iostream>
-#include <sstream>
 #include "Courses.h"
 using namespace std;
  struct Node {
