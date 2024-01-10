@@ -11,6 +11,7 @@ using namespace std;
  struct Node {
        Courses info;
         Node* next;
+      Node(
     }; 
 Node* head;
 class ManagerCourses {
