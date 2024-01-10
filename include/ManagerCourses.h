@@ -9,7 +9,7 @@
 #include "Courses.h"
 using namespace std;
  struct Node {
-        string option;
+       Courses info;
         Node* next;
     }; 
 Node* head;
