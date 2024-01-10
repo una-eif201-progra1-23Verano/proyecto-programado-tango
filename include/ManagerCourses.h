@@ -21,6 +21,10 @@ class ManagerCourses {
 
     private:
         struct Node {
+            bool operator==(const Node &rhs) const;
+
+            bool operator!=(const Node &rhs) const;
+
             Courses info;
             Node* next;
         };
