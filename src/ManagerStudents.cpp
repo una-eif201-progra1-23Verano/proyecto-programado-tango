@@ -5,7 +5,7 @@
 #include "ManagerStudents.h"
 
 using namespace std;
-LinkedList::~LinkedList(){
+ManagerStudents::~ManagerStudents(){
     Node* actual = header;
     while(actual != nullptr){
         Node* next = actual->next;
@@ -15,13 +15,13 @@ LinkedList::~LinkedList(){
     }
 }
 
-void LinkedList::newStudent(Student student) {
+void ManagerStudents::newStudent(Student student) {
     Node* n_Node= new Node(student);
     n_Node -> next = header;
     header = n_Node;
 
 }
-void LinkedList::showList() const {
+void ManagerStudents::showList() const {
     Node* actual= header;
     while (actual != header){
         cout<<"Name: "<<actual->info.getName()<<endl;

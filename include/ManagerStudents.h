@@ -15,20 +15,18 @@ struct Node{
 };
 
 //lista enlazada
-class LinkedList{
+class ManagerStudents{
 private:
     Node* header;
 
 public:
-    LinkedList() : header(nullptr){}
-    ~LinkedList();
+    ManagerStudents() : header(nullptr){}
+    ~ManagerStudents();
 
     void newStudent(Student student);
     void showList() const;
 };
-class ManagerStudents {
 
-};
 
 
 #endif //MAIN_MANAGERSTUDENTS_H

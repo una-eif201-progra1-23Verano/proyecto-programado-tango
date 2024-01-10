@@ -14,13 +14,11 @@ using namespace std;
     Node* header;
 
 public:
-    LinkedList() : header(nullptr){}
-    ~LinkedList();
+
 
     void newCourses(Courses courses);
     void showList() const;
 };
-class LinkedList{
 class ManagerCourses {
 };
 
