@@ -30,7 +30,11 @@ public:
     const string &getCourseCode() const;
 
     void setCourseCode(const string &courseCode);
+
+    void 
+
     string toString();
+    
 };
 
 
