@@ -7,12 +7,17 @@ ManagerCourses::ManagerCourses() {
     head= nullptr;
     actual= nullptr;
 }
-void ManagerCourses::insertStudent(Courses *course) {
+void ManagerCourses::insertCourse(Courses *course) {
     actual=head;
     if(head== nullptr){
-        head=new ManagerCourses
+        head=new ManagerCourses;
     }
 }
-
+bool deleteByCode(string code){
+    string codeToDelete;
+    if(codeToDelete== code){
+        code= "null " ;
+    }
+}
 
 
