@@ -24,12 +24,6 @@ public:
 };
 class LinkedList{
 class ManagerCourses {
-private:
-
-public:
-ManagerCourses();
-~ManagerCourses();
-
 };
 
 
