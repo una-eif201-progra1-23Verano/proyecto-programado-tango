@@ -29,6 +29,8 @@ add_executable(main ${SRC}
         include/ManagerStudents.h
         src/ManagerCourses.cpp
         include/ManagerCourses.h
+        Person.cpp
+        Person.h
 )             # Add executable
 
 # Copy compile_commands.json to project root
