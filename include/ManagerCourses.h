@@ -21,9 +21,11 @@ class ManagerCourses {
 
     private:
         struct Node {
-            Courses info;
+            Courses* info;
             Node* next;
+            Node(Courses*, Node*);
         };
+
         Node* head;
         Node* actual;
 };

@@ -3,15 +3,18 @@
 //
 
 #include "ManagerCourses.h"
-ManagerCourses::ManagerCourses() {
+ManagerCourses::ManagerCourses()
+{
     head= nullptr;
     actual= nullptr;
 }
 void ManagerCourses::insertCourse(Courses *course) {
     actual=head;
-    if(head== nullptr){
-        head=new ManagerCourses;
-
+    if(head== nullptr) {
+        head = new Node(course, nullptr);
+    }
+    else{
+        while (actual.)
 
 
 
