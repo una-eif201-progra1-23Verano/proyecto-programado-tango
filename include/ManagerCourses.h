@@ -11,7 +11,7 @@ using namespace std;
  struct Node {
        Courses info;
         Node* next;
-      Node(
+      Node(Student student)
     }; 
 Node* head;
 class ManagerCourses {
