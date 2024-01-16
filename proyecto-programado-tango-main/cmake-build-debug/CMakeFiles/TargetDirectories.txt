@@ -1,4 +1,0 @@
-C:/Users/Ennia/Desktop/proyecto-programado-tango-main/cmake-build-debug/CMakeFiles/main.dir
-C:/Users/Ennia/Desktop/proyecto-programado-tango-main/cmake-build-debug/CMakeFiles/copy-compile-commands.dir
-C:/Users/Ennia/Desktop/proyecto-programado-tango-main/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Ennia/Desktop/proyecto-programado-tango-main/cmake-build-debug/CMakeFiles/rebuild_cache.dir

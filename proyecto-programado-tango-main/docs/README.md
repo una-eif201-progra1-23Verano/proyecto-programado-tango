@@ -1,1 +1,0 @@
-# Docs files directory
