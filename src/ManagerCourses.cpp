@@ -1,7 +1,6 @@
 //
 // Created by Ender on 8/1/2024.
 //
-
 #include "ManagerCourses.h"
 ManagerCourses::ManagerCourses()
 {
@@ -11,41 +10,30 @@ ManagerCourses::ManagerCourses()
 void ManagerCourses::insertCourse(Courses *course) {
     actual=head;
     if(head== nullptr) {
-        head = new Node(course, nullptr);
+        head = new NodeCourses(course);
     }
     else{
-        while (actual.)
-
-
-
-
-
-
-
-
-
-
+        while (actual);
 
     }
 }
-bool deleteByCode(string code) {
-    string codeToDelete;
-    if(codeToDelete== code){
-        code= "null " ;
-    }
+void ManagerCourses::deleteByCode(string code) {
+
 }
+
 string ManagerCourses:: findByCode(string code){
     stringstream s;
     actual=head;
 
-    while(head != nullptr){
-        Courses *CourseInfo = dynamic_cast<Courses*>(head-> &getCourseCode());
+    while(actual != nullptr){
+        Courses *CourseInfo = dynamic_cast<Courses*>(actual->getCourses());
         if(CourseInfo && CourseInfo-> getCourseCode() == code){
 
-            s<<CourseInfo->;
+            s<<CourseInfo->toString();
         }
-    }
 
+    }
+    return s.str();
 }
 
 

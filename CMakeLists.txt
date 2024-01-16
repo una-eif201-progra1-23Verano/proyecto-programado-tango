@@ -31,6 +31,10 @@ add_executable(main ${SRC}
         include/ManagerCourses.h
         src/Person.cpp
         include/Person.h
+        include/NodeCourses.h
+        src/NodeCourses.cpp
+        include/NodeStudents.h
+        src/NodeStudents.cpp
 )             # Add executable
 
 # Copy compile_commands.json to project root

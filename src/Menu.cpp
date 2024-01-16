@@ -1,9 +1,16 @@
 #include "Menu.h"
 #include "Student.h"
-#include <iostream>
+
 using namespace std;
 
-Menu::Menu() : head(nullptr) {
+Menu::Menu() : mc(nullptr), ms(nullptr), head(nullptr) {
+    insertOption("Exit");
+    insertOption("1.Student Administration");
+}
+
+Menu::Menu(ManagerCourses *mc, ManagerStudents *ms): head(nullptr) {
+    this->mc = mc;
+    this->ms = ms;
     insertOption("Exit");
     insertOption("1.Student Administration");
 }
@@ -12,16 +19,30 @@ Menu::~Menu() {
     clear();
 }
 
-void Menu::insertOption(const string& opt) {
-    Node* newNode = new Node{opt, head};
-    head = newNode;
+void Menu::insertOption(const string &opt) {
+    if (head != nullptr) {
+        Node *newNode = new Node{opt,head};
+        Node *aux = head;
+        head = newNode;
+        head->next =aux;
+    } else {
+        Node *newNode = new Node{opt};
+        head = newNode;
+        head->next = nullptr;
+        cout<<endl;
+    }
+
 }
 
 void Menu::displayMenu() const {
-    Node* current = head;
+    Node *current = head;
     while (current != nullptr) {
         cout << current->option << endl;
-        current = current->next;
+        if (current->next != nullptr) {
+            current = current->next;
+        }else{
+            current = nullptr;
+        }
     }
 }
 
@@ -41,59 +62,82 @@ void Menu::handleUserInput() {
     } while (userChoice != "Exit");
 }
 
-void Menu::handleOption(const string& opt) {
+void Menu::handleOption(const string &opt) {
     if (opt == "1") {
         int op;
-        cout<<endl<<"Student Administration"<<endl
-        <<"1.Search Student"<<endl
-        <<"2. Enter new student"<<endl
-        <<"3.Display all the students"<<endl
-        <<"4.Delete Student"<<endl
-        <<"5.Return"<<endl;
-        cin>>op;
+        cout << endl << "Student Administration" << endl
+             << "1.Search Student" << endl
+             << "2. Enter new student" << endl
+             << "3.Display all the students" << endl
+             << "4.Delete Student" << endl
+             << "5.Return" << endl;
+        cin >> op;
         switch (op) {
             case 1:
-                cout<<"hola";
-                //administrar estudiantes
-                //mostrar el promedio(metodo para calcularlo con las notas de los cursos)
-                //hacer if para las dos opciones (actualizar nota curso y mostrar info)
-                int subop;
-                cin>>subop;
-                if(subop==1)
-                    cout<<"hola";
-                else if(subop==2)
-                    cout<<"Hola";
-                    break;
+            {
+                int id = 0;
+                cout << "Search Student" << endl;
+                cout << "Insert Student: ";
+                cin >> id;
+                cout<<ms->searchStudent(id)->getStudents()->toString()<<endl;
+                break;
+            }
             case 2:
-                //meter nuevo estudiante (nombre, cedula y carrera)
-                cout<<"hola";
+            {
+                int id = 0;
+                string nombre, grado;
+                cout << "Enter new Student" << endl;
+                cout << "Insert Student ID: ";
+                cin >> id;
+                cout<<endl;
+                cout << "Insert Student Name: ";
+                cin >> nombre;
+                cout<<endl;
+                cout << "Insert Student Major: ";
+                cin >> grado;
+                cout<<endl;
+                Student *s = new Student(id, nombre,grado);
+                NodeStudents* ns = new NodeStudents(s);
+                ms->newStudent(ns);
+                cout<<"Estudiante Agregado..."<<endl;
+                system("pause");
                 break;
+            }
             case 3:
-                //mostrar estudiantes(toString)
-                cout<<"hola";
+            {
+                cout << "Lista de Estudiantes" << endl;
+                ms->showList();
+                system("pause");
                 break;
+            }
             case 4:
-                //eliminar estudiantes(metodo eliminar)
-                cout<<"hola";
-            break;
+            {   int id;
+                cout << "Borrar Estudiante" << endl;
+                cout << "Insert Student: ";
+                cin >> id;
+                ms->deleteStudent(id);
+                cout<<"Estudiante Eliminado..."<<endl;
+                system("pause");
+                break;
+            }
             case 5:
                 //salir
-                cout<<"hola";
+                cout << "hola";
                 break;
             default:
-                cout<<"Invalid input"<<endl;
+                cout << "Invalid input" << endl;
                 break;
         }
-    }
-    else
-        cout<<"Thank you for use the program"<<endl;
+    } else
+        cout << "Thank you for use the program" << endl;
 }
 
 void Menu::clear() {
-    Node* current = head;
+    Node *current = head;
     while (current != nullptr) {
-        Node* next = current->next;
+        Node *next = current->next;
         delete current;
         current = next;
     }
+    head = nullptr;
 }

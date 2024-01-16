@@ -20,14 +20,14 @@ public:
 
     ~Student();
 
-    int getId() const;
+    int getId() ;
     void setId(int p_id);
 
-    const string &getName() const;
-    void setName(const string &p_name);
+    string getName() ;
+    void setName(string p_name);
 
-    const string &getMajor() const;
-    void setMajor(const string &p_major);
+    string getMajor() ;
+    void setMajor( string p_major);
 
     string toString();
 };

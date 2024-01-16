@@ -4,27 +4,30 @@
 
 #ifndef MAIN_MANAGERSTUDENTS_H
 #define MAIN_MANAGERSTUDENTS_H
-#include "Student.h"
+#include "NodeStudents.h"
+
 using namespace std;
 
-struct Node{
-    Student info;
-    Node* next;
-
-    Node(Student student): info(student), next(nullptr){}
-};
-
-//lista enlazada
 class ManagerStudents{
 private:
-    Node* header;
-
+    NodeStudents* header;
+    NodeStudents* actual;
 public:
-    ManagerStudents() : header(nullptr){}
+    ManagerStudents();
+    ManagerStudents(NodeStudents*);
+    ManagerStudents(Student*);
     ~ManagerStudents();
 
-    void newStudent(Student student);
-    void showList() const;
+    void setHead(NodeStudents*);
+    void setActual(NodeStudents*);
+    NodeStudents* getHead();
+    NodeStudents* getActual();
+
+    void newStudent(NodeStudents*);
+    NodeStudents* searchStudent(int); //x
+    void deleteStudent(int); //x
+    void showList();
+    string toString();
 };
 
 

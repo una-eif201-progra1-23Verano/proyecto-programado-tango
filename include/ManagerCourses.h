@@ -6,28 +6,27 @@
 #define MAIN_MANAGERCOURSES_H
 #include "Courses.h"
 #include <sstream>
+#include "NodeCourses.h"
 using namespace std;
 
 class ManagerCourses {
     public:
         ManagerCourses();
         ~ManagerCourses();
+
         void insertCourse(Courses* course);
         string findByCode(string code);
-        bool deleteByCode(string code);
+        void deleteByCode(string code);
         string toString();
 
 
 
     private:
-        struct Node {
-            Courses* info;
-            Node* next;
-            Node(Courses*, Node*);
-        };
 
-        Node* head;
-        Node* actual;
+
+        NodeCourses* head;
+        NodeCourses* actual;
+
 };
 
 

@@ -1,32 +1,28 @@
-//
-// Created by Ender on 8/1/2024.
-//
-
 #include "Courses.h"
 
 Courses::Courses() {
-    this->courseName="";
-    this->grades=0;
-    this->courseCode="";
+    courseName="";
+    grades=0;
+    courseCode="";
 }
-
-Courses::Courses(const string &p_courseName, int p_grades, const string &p_courseCode) : courseName(p_courseName),
-                                                                                   grades(p_grades),
-                                                                                   courseCode(p_courseCode) {}
-
+Courses::Courses(string cn,int g,string cc) {
+    courseName=cn;
+    grades=g;
+    courseCode=cc;
+}
 Courses::~Courses() {
 
 }
 
-const string &Courses::getCourseName() const {
+string Courses::getCourseName(){
     return courseName;
 }
 
-void Courses::setCourseName(const string &p_courseName) {
+void Courses::setCourseName(string p_courseName) {
     Courses::courseName = p_courseName;
 }
 
-int Courses::getGrades() const {
+int Courses::getGrades(){
     return grades;
 }
 
@@ -34,11 +30,11 @@ void Courses::setGrades(int p_grades) {
     Courses::grades = p_grades;
 }
 
-const string &Courses::getCourseCode() const {
+string Courses::getCourseCode(){
     return courseCode;
 }
 
-void Courses::setCourseCode(const string &p_courseCode) {
+void Courses::setCourseCode(string p_courseCode) {
     Courses::courseCode = p_courseCode;
 }
 string Courses::toString(){

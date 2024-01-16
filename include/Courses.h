@@ -2,8 +2,8 @@
 // Created by Ender on 8/1/2024.
 //
 
-#ifndef MAIN_COURSES_H
-#define MAIN_COURSES_H
+#ifndef COURSES_H
+#define COURSES_H
 #include <iostream>
 #include <sstream>
 using namespace std;
@@ -16,24 +16,24 @@ private:
 
 public:
     Courses();
-    Courses(const string &p_courseName, int p_grades, const string &p_courseCode);
-    virtual ~Courses();
+    Courses(string,int,string);
+    ~Courses();
 
-    const string &getCourseName() const;
+    string getCourseName();
 
-    void setCourseName(const string &courseName);
+    void setCourseName(string courseName);
 
-    int getGrades() const;
+    int getGrades();
 
     void setGrades(int grades);
 
-    const string &getCourseCode() const;
+     string getCourseCode() ;
 
-    void setCourseCode(const string &courseCode);
+    void setCourseCode(string courseCode);
 
     string toString();
     
 };
 
 
-#endif //MAIN_COURSES_H
+#endif //COURSES_H
