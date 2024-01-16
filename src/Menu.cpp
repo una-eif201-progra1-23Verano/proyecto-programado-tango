@@ -96,5 +96,4 @@ void Menu::clear() {
         delete current;
         current = next;
     }
-    head = nullptr;
 }
