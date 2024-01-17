@@ -1,26 +1,18 @@
-#include <string>
-#include <sstream>
-#include "Node.h"
-#include "ManagerCourses.h"
-#include "ManagerStudents.h"
-/*!
- * \class Menu
- * \brief The Menu class represents a menu.
- */
+#include <iostream>
+#include "Node.h"//;
+using namespace std;
 
-class Menu {
+class Menu{
 public:
+    //Atributo
+   Node * head;
+    //metodos
     Menu();
-    Menu(ManagerCourses*,ManagerStudents*);
     ~Menu();
-    void displayMenu() const;
-    void handleUserInput();
+void insertOption(const string&);
+void displayMenu() const;
+void handleUserInput();
+void handleOption(const string&);
+void clear();
 
-private:
-    Node* head;
-     ManagerCourses* mc;
-     ManagerStudents* ms;
-    void insertOption(const std::string& opt);
-    void handleOption(const std::string& opt);
-    void clear();
 };
