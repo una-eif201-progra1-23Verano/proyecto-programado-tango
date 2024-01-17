@@ -1,6 +1,8 @@
 #include "Student.h"
 #include "Menu.h"
-
+#include "NodeStudents.h"
+#include "ManagerCourses.h"
+#include "ManagerStudents.h"
 
 using namespace std;
 int main() {
@@ -12,6 +14,7 @@ int main() {
     Student* s3 = new Student(3333,"Maria Morales","quinto");
     Student* s4 = new Student(4444,"Ian Frazer","quinto");
     Student* s5 = new Student(5555,"Jaime Corrales","quinto");
+    Student* s6 = new Student(6666, "Mauricio Hoffman", "quinto");
     NodeStudents*n1 = new NodeStudents(s1);
     NodeStudents*n2 = new NodeStudents(s2);
     NodeStudents*n3 = new NodeStudents(s3);

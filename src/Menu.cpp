@@ -1,6 +1,7 @@
 #include "Menu.h"
 #include "Student.h"
-
+#include "ManagerCourses.h"
+#include "ManagerStudents.h"
 using namespace std;
 
 Menu::Menu() : mc(nullptr), ms(nullptr), head(nullptr) {
