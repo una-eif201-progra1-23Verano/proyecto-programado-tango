@@ -1,5 +1,7 @@
 #include "Student.h"
 #include "Menu.h"
+#include "ManagerCourses.h"
+#include "ManagerStudents.h"
 
 
 using namespace std;
