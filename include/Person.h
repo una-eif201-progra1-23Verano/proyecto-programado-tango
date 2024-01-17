@@ -9,7 +9,7 @@
 
 using namespace std;
 class Person {
-private:
+protected:
     int id;
     string name;
 public:
@@ -19,13 +19,12 @@ public:
 
     virtual ~Person();
 
-    int getId() const;
+    int getId() ;
+    void setId(int p_id);
 
-    void setId(int id);
+    string getName() ;
+    void setName(string p_name);
 
-    const string &getName() const;
-
-    void setName(const string &name);
 };
 
 
