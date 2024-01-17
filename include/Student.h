@@ -7,11 +7,12 @@
 using namespace std;
 #include <iostream>
 #include <sstream>
-#include "Person.h"
 
-class Student : public Person{
+class Student {
 private:
-   string major;
+    int id;
+    string name;
+    string major;
 
 public:
     Student();
@@ -19,6 +20,11 @@ public:
 
     ~Student();
 
+    int getId() ;
+    void setId(int p_id);
+
+    string getName() ;
+    void setName(string p_name);
 
     string getMajor() ;
     void setMajor( string p_major);
