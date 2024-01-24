@@ -7,29 +7,20 @@
 using namespace std;
 #include <iostream>
 #include <sstream>
-
-class Student {
+#include "Person.h"
+class Student : public Person{
 private:
-    int id;
-    string name;
     string major;
 
 public:
     Student();
-    Student(int p_id, const string &p_name, const string &p_major);
+    Student(int id, const string &name, const string &major);
 
     ~Student();
 
-    int getId() ;
-    void setId(int p_id);
-
-    string getName() ;
-    void setName(string p_name);
-
     string getMajor() ;
     void setMajor( string p_major);
-
-    string toString();
+    virtual string toString();
 };
 
 
