@@ -6,27 +6,30 @@
 #define MAIN_MANAGERCOURSES_H
 #include "Courses.h"
 #include <sstream>
-#include "NodeCourses.h"
 using namespace std;
 
 class ManagerCourses {
-    public:
-        ManagerCourses();
-        ~ManagerCourses();
+private:
+    Courses *vectorCourses;
+    int size;
+    int capacity;
+public:
+    ManagerCourses();
+    ManagerCourses(int);
+    ~ManagerCourses();
 
-        void insertCourse(Courses* course);
-        string findByCode(string code);
-        void deleteByCode(string code);
-        string toString();
+    void setVectorCourses(Courses*);
+    void setSize(int);
+    void setCapacity(int);
 
+    Courses* getVectorCourses();
+    int getSize();
+    int getCapacity();
 
-
-    private:
-
-
-        NodeCourses* head;
-        NodeCourses* actual;
-
+    void addCourse(Courses*);
+    void deleteCourse(int);
+    void showList();
+    string toString();
 };
 
 

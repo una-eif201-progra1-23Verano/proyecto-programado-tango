@@ -2,38 +2,73 @@
 // Created by Ender on 8/1/2024.
 //
 #include "ManagerCourses.h"
-ManagerCourses::ManagerCourses()
-{
-    head= nullptr;
-    actual= nullptr;
+
+using namespace std;
+
+ManagerCourses::ManagerCourses() {
+    vectorCourses = nullptr;
+    size = 0;
+    capacity = 0;
 }
-void ManagerCourses::insertCourse(Courses *course) {
-    actual=head;
-    if(head== nullptr) {
-        head = new NodeCourses(course);
+
+ManagerCourses::ManagerCourses(int capacity) {
+    this->capacity = capacity;
+    vectorCourses = new Courses[capacity];
+    size = 0;
+}
+
+ManagerCourses::~ManagerCourses() {
+    delete[] vectorCourses;
+}
+
+void ManagerCourses::setVectorCourses(Courses *v) {
+    vectorCourses = v;
+}
+
+void ManagerCourses::setSize(int s) {
+    size = s;
+}
+
+void ManagerCourses::setCapacity(int c) {
+    capacity = c;
+}
+
+Courses *ManagerCourses::getVectorCourses() {
+    return vectorCourses;
+}
+
+int ManagerCourses::getSize() {
+    return size;
+}
+
+int ManagerCourses::getCapacity() {
+    return capacity;
+}
+
+void ManagerCourses::addCourse(Courses *course) {
+    if (size < capacity) {
+        vectorCourses[size] = *course;
+        size++;
+    } else {
+        cout << "No hay espacio para agregar mas cursos" << endl;
     }
-    else{
-        while (actual);
-
-    }
-}
-void ManagerCourses::deleteByCode(string code) {
-
 }
 
-string ManagerCourses:: findByCode(string code){
-    stringstream s;
-    actual=head;
-
-    while(actual != nullptr){
-        Courses *CourseInfo = dynamic_cast<Courses*>(actual->getCourses());
-        if(CourseInfo && CourseInfo-> getCourseCode() == code){
-
-            s<<CourseInfo->toString();
+void ManagerCourses::deleteCourse(int index) {
+    if (index < size) {
+        for (int i = index; i < size - 1; i++) {
+            vectorCourses[i] = vectorCourses[i + 1];
         }
-
+        size--;
+    } else {
+        cout << "No se puede eliminar el curso" << endl;
     }
-    return s.str();
+}
+
+void ManagerCourses::showList() {
+    for (int i = 0; i < size; i++) {
+        cout << vectorCourses[i].toString() << endl;
+    }
 }
 
 
