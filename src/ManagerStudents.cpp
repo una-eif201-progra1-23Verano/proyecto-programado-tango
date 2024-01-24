@@ -55,9 +55,10 @@ NodeStudents *ManagerStudents::searchStudent(int id) {
     if (actual->getStudents()->getId() == id) {
         cout << "Estudiante Encontrado:" << endl;
         return actual;
-    }
+    } else{
     cout << "Estudiante no encontrado..." << endl;
     return nullptr;
+}
 }
 
 void ManagerStudents::deleteStudent(int id) {
@@ -81,7 +82,7 @@ void ManagerStudents::deleteStudent(int id) {
 
 void ManagerStudents::showList() {
     actual = header;
-    while (actual->next != nullptr) {
+    while (actual != nullptr) {
         cout << endl << endl;
         cout << "Estudiante:" << endl;
         cout << "Name: " << actual->getStudents()->getName() << endl;
@@ -89,12 +90,6 @@ void ManagerStudents::showList() {
         cout << "Major: " << actual->getStudents()->getMajor() << endl;
         actual = actual->next;
     }
-    cout << endl << endl;
-    cout << "Estudiante:" << endl;
-    cout << "Name: " << actual->getStudents()->getName() << endl;
-    cout << "ID: " << actual->getStudents()->getId() << endl;
-    cout << "Major: " << actual->getStudents()->getMajor() << endl;
-    cout << endl << endl;
 }
 
 

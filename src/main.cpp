@@ -18,11 +18,15 @@ int main() {
     Student* s4 = new Student(4444,"Ian Frazer","quinto");
     Student* s5 = new Student(5555,"Jaime Corrales","quinto");
     Student* s6 = new Student(6666, "Mauricio Hoffman", "quinto");
+    Student* s7 = new Student(7777, "Ender", "quinto");
     NodeStudents*n1 = new NodeStudents(s1);
     NodeStudents*n2 = new NodeStudents(s2);
     NodeStudents*n3 = new NodeStudents(s3);
     NodeStudents*n4 = new NodeStudents(s4);
     NodeStudents*n5 = new NodeStudents(s5);
+    NodeStudents*n6 = new NodeStudents(s6);
+    NodeStudents*n7 = new NodeStudents(s7);
+
     ManagerCourses*mc = new ManagerCourses();
     ManagerStudents*ms = new ManagerStudents();
     ms->newStudent(n1);
@@ -30,6 +34,9 @@ int main() {
     ms->newStudent(n3);
     ms->newStudent(n4);
     ms->newStudent(n5);
+    ms->newStudent(n6);
+    ms->newStudent(n7);
+
     Menu*menu = new Menu(mc,ms);
     menu->handleUserInput();
     return 0;

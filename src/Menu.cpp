@@ -86,18 +86,18 @@ void Menu::handleOption(const string &opt) {
             case 2:
             {
                 int id = 0;
-                string nombre, grado;
+                string name, major;
                 cout << "Enter new Student" << endl;
                 cout << "Insert Student ID: ";
                 cin >> id;
                 cout<<endl;
                 cout << "Insert Student Name: ";
-                cin >> nombre;
+                getline(cin, name);
                 cout<<endl;
                 cout << "Insert Student Major: ";
-                cin >> grado;
+                getline(cin, major);
                 cout<<endl;
-                Student *s = new Student(id, nombre,grado);
+                Student *s = new Student(id, name,major);
                 NodeStudents* ns = new NodeStudents(s);
                 ms->newStudent(ns);
                 cout<<"Estudiante Agregado..."<<endl;
@@ -122,8 +122,6 @@ void Menu::handleOption(const string &opt) {
                 break;
             }
             case 5:
-                //salir
-                cout << "hola";
                 break;
             default:
                 cout << "Invalid input" << endl;

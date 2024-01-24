@@ -3,7 +3,6 @@
 using namespace std;
 #include <string>
 #include <sstream>
-#include "Node.h"
 #include "ManagerCourses.h"
 #include "ManagerStudents.h"
 /*!
@@ -12,26 +11,25 @@ using namespace std;
  */
 
 
-    class Menu {
-    public:
-        Menu();
+class Menu {
+public:
+    Menu();
+    Menu(ManagerCourses *mc, ManagerStudents *ms);
+    ~Menu();
+    void displayMenu() const;
+    void handleUserInput();
 
-        Menu(ManagerCourses *, ManagerStudents *);
-
-        ~Menu();
-
-        void displayMenu() const;
-
-        void handleUserInput();
-
-    private:
-        Node *head;
-        ManagerCourses *mc;
-        ManagerStudents *ms;
-
-        void insertOption(const std::string &opt);
-
-        void handleOption(const std::string &opt);
-
-        void clear();
+private:
+    struct Node {
+        string option;
+        Node* next;
     };
+
+    Node *head;
+    ManagerCourses *mc;
+    ManagerStudents *ms;
+
+    void insertOption(const string& opt);
+    void handleOption(const string& opt);
+    void clear();
+};
