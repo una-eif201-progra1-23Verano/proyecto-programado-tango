@@ -6,6 +6,7 @@
 #define MAIN_MANAGERCOURSES_H
 #include "Courses.h"
 #include <sstream>
+//hacer con vector
 using namespace std;
 
 class ManagerCourses {
