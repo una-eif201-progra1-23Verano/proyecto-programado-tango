@@ -27,7 +27,6 @@ public:
     NodeStudents* searchStudent(int); //x
     void deleteStudent(int); //x
     void showList();
-    string toString();
 };
 
 

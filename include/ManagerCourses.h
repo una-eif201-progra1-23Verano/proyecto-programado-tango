@@ -30,7 +30,6 @@ public:
     void addCourse(Courses*);
     void deleteCourse(int);
     void showList();
-    string toString();
 };
 
 
