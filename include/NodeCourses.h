@@ -6,6 +6,7 @@
 #define MAIN_NODECOURSES_H
 #include "Courses.h"
 #include <iostream>
+/*
 using namespace std;
 
 struct NodeCourses{
@@ -21,11 +22,6 @@ public:
     void setNext(NodeCourses* nextt);
     Courses* getCourses();
     NodeCourses* getNext();
-    void insertOption(NodeCourses** , const std::string&);
-    void displayMenu(NodeCourses*);
-    void handleOption(const std::string&);
-
-
 };
-
+*/
 #endif //MAIN_NODECOURSES_H

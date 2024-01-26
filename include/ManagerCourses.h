@@ -11,7 +11,7 @@ using namespace std;
 
 class ManagerCourses {
 private:
-    Courses *vectorCourses;
+    Courses * courses; //course
     int size;
     int capacity;
 public:

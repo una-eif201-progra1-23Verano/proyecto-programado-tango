@@ -22,7 +22,7 @@ void Student::setMajor(string p_major) {
     major = p_major;
 }
 
-string Student::toString() {
+const string Student::toString() {
     stringstream s;
     s << "Student: " << endl;
     s << "Id: " << id << endl;

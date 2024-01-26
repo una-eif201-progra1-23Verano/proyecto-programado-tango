@@ -20,7 +20,7 @@ public:
 
     string getMajor() ;
     void setMajor( string p_major);
-    string toString () override;
+    const string toString () override;
 };
 
 

@@ -91,6 +91,7 @@ void Menu::handleOption(const string &opt) {
                 cout << "Insert Student ID: ";
                 cin >> id;
                 cout<<endl;
+                cin.ignore();
                 cout << "Insert Student Name: ";
                 getline(cin, name);
                 cout<<endl;
@@ -98,7 +99,7 @@ void Menu::handleOption(const string &opt) {
                 getline(cin, major);
                 cout<<endl;
                 Student *s = new Student(id, name,major);
-                NodeStudents* ns = new NodeStudents(s);
+                NodeStudents *ns = new NodeStudents(s);
                 ms->newStudent(ns);
                 cout<<"Estudiante Agregado..."<<endl;
                 system("pause");

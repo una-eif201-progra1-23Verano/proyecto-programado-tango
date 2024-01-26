@@ -12,13 +12,13 @@ int main() {
     system("cls");
     cout << "Universidad Nacional de Costa Rica" << endl;
 
-    Student* s1 = new Student(1111,"Pedro Perez","quinto");
-    Student* s2 = new Student(2222,"Juan Valdez","quinto");
-    Student* s3 = new Student(3333,"Maria Morales","quinto");
-    Student* s4 = new Student(4444,"Ian Frazer","quinto");
-    Student* s5 = new Student(5555,"Jaime Corrales","quinto");
-    Student* s6 = new Student(6666, "Mauricio Hoffman", "quinto");
-    Student* s7 = new Student(7777, "Ender", "quinto");
+    Student* s1 = new Student(1111,"Pedro Perez","Educacion");
+    Student* s2 = new Student(2222,"Juan Valdez","Fisiologia");
+    Student* s3 = new Student(3333,"Maria Morales","Filosofia");
+    Student* s4 = new Student(4444,"Ian Frazer","Medicina");
+    Student* s5 = new Student(5555,"Jaime Corrales","psicologia");
+    Student* s6 = new Student(6666, "Mauricio Hoffman", "Ing. Computacion");
+    Student* s7 = new Student(7777, "Rodolfa", "Ecologia");
     NodeStudents*n1 = new NodeStudents(s1);
     NodeStudents*n2 = new NodeStudents(s2);
     NodeStudents*n3 = new NodeStudents(s3);

@@ -11,7 +11,7 @@ using namespace std;
 class Courses {
 private:
     string courseName;
-    int grades;
+    int grades; //cambiar a grade
     string courseCode;
 
 public:

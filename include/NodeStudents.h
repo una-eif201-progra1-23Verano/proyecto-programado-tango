@@ -4,7 +4,7 @@
 #include <iostream>
 using namespace std;
 
-struct NodeStudents{
+struct NodeStudents{ //pasar a ListStudent
 public:
     //Atributos
     Student* student;

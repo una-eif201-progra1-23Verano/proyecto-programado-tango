@@ -6,23 +6,23 @@
 using namespace std;
 
 ManagerCourses::ManagerCourses() {
-    vectorCourses = nullptr;
+    courses = nullptr;
     size = 0;
     capacity = 0;
 }
 
 ManagerCourses::ManagerCourses(int capacity) {
     this->capacity = capacity;
-    vectorCourses = new Courses[capacity];
+    courses = new Courses[capacity];
     size = 0;
 }
 
 ManagerCourses::~ManagerCourses() {
-    delete[] vectorCourses;
+    delete[] courses;
 }
 
 void ManagerCourses::setVectorCourses(Courses *v) {
-    vectorCourses = v;
+    courses = v;
 }
 
 void ManagerCourses::setSize(int s) {
@@ -34,7 +34,7 @@ void ManagerCourses::setCapacity(int c) {
 }
 
 Courses *ManagerCourses::getVectorCourses() {
-    return vectorCourses;
+    return courses;
 }
 
 int ManagerCourses::getSize() {
@@ -47,7 +47,7 @@ int ManagerCourses::getCapacity() {
 
 void ManagerCourses::addCourse(Courses *course) {
     if (size < capacity) {
-        vectorCourses[size] = *course;
+        courses[size] = *course;
         size++;
     } else {
         cout << "No hay espacio para agregar mas cursos" << endl;
@@ -57,7 +57,7 @@ void ManagerCourses::addCourse(Courses *course) {
 void ManagerCourses::deleteCourse(int index) {
     if (index < size) {
         for (int i = index; i < size - 1; i++) {
-            vectorCourses[i] = vectorCourses[i + 1];
+            courses[i] = courses[i + 1];
         }
         size--;
     } else {
@@ -67,7 +67,7 @@ void ManagerCourses::deleteCourse(int index) {
 
 void ManagerCourses::showList() {
     for (int i = 0; i < size; i++) {
-        cout << vectorCourses[i].toString() << endl;
+        cout << courses[i].toString() << endl;
     }
 }
 

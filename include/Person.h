@@ -27,7 +27,7 @@ public:
 
     void setName(const string &name);
 
-    virtual string toString()=0;
+    virtual const string toString()=0;
 };
 
 
