@@ -20,7 +20,7 @@ public:
 
     string getMajor() ;
     void setMajor( string p_major);
-    virtual string toString();
+    string toString () override;
 };
 
 
