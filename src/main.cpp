@@ -19,6 +19,11 @@ int main() {
     Student* s5 = new Student(5555,"Jaime Corrales","psicologia");
     Student* s6 = new Student(6666, "Mauricio Hoffman", "Ing. Computacion");
     Student* s7 = new Student(7777, "Rodolfa", "Ecologia");
+    Courses* d1 = new Courses("Medicina",1234,"1232");
+    Courses* d2 = new Courses("Medicin",1231,"1231");
+    Courses* d3 = new Courses("Medici",1232,"1233");
+    Courses* d4 = new Courses("Medic",1233,"1234");
+    Courses* d5 = new Courses("Medi",1235,"1235");
     NodeStudents*n1 = new NodeStudents(s1);
     NodeStudents*n2 = new NodeStudents(s2);
     NodeStudents*n3 = new NodeStudents(s3);
