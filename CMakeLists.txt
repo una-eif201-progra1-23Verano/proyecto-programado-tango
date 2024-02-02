@@ -35,7 +35,7 @@ add_executable(main ${SRC}
         src/NodeCourses.cpp
         include/NodeStudents.h
         src/NodeStudents.cpp
-        include/Manager.cpp
+        src/Manager.cpp
         include/Manager.h
 )             # Add executable
 
