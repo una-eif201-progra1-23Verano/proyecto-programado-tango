@@ -3,10 +3,16 @@
 #define MAIN_MANAGER_H
 #include<fstream>
 #include "iostream"
+#include <vector>
+#include "ManagerCourses.h"
+#include "ManagerStudents.h"
 using namespace std;
 class Manager {
-    std::ofstream archivo;
-    archivo.open(nombreArchivo.c_str(),ios::out);
+private:
+
+public:
+    Manager();
+    void escritura(ManagerCourses*,ManagerStudents*);
 
 };
 

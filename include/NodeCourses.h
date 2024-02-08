@@ -6,7 +6,7 @@
 #define MAIN_NODECOURSES_H
 #include "Courses.h"
 #include <iostream>
-/*
+
 using namespace std;
 
 struct NodeCourses{
@@ -23,5 +23,5 @@ public:
     Courses* getCourses();
     NodeCourses* getNext();
 };
-*/
+
 #endif //MAIN_NODECOURSES_H

@@ -3,7 +3,7 @@
 #include "NodeStudents.h"
 #include "ManagerCourses.h"
 #include "ManagerStudents.h"
-
+#include "Manager.h"
 
 
 
@@ -11,7 +11,7 @@ using namespace std;
 int main() {
     system("cls");
     cout << "Universidad Nacional de Costa Rica" << endl;
-
+    Manager* q1 = new Manager ();
     Student* s1 = new Student(1111,"Pedro Perez","Educacion");
     Student* s2 = new Student(2222,"Juan Valdez","Fisiologia");
     Student* s3 = new Student(3333,"Maria Morales","Filosofia");
@@ -44,5 +44,6 @@ int main() {
 
     Menu*menu = new Menu(mc,ms);
     menu->handleUserInput();
+    q1->escritura(mc,ms);
     return 0;
 }

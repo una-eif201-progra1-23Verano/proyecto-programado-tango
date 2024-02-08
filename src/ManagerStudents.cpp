@@ -14,7 +14,7 @@ ManagerStudents::ManagerStudents() {
 ManagerStudents::~ManagerStudents() {
     NodeStudents *actual = header;
     while (actual != nullptr) {
-        NodeStudents *next = actual->next;
+        NodeStudents *next = actual->getNext();
 
         delete actual;
         actual = next;
@@ -38,19 +38,19 @@ NodeStudents *ManagerStudents::getActual() {
 }
 
 void ManagerStudents::newStudent(NodeStudents *student) {
-    student->next = header;
+    student->setNext(getHead());
     header = student;
 
 }
 
 NodeStudents *ManagerStudents::searchStudent(int id) {
     actual = header;
-    while (actual->next != nullptr) {
+    while (actual->getNext() != nullptr) {
         if (actual->getStudents()->getId() == id) {
             cout << "Estudiante Encontrado:" << endl;
             return actual;
         }
-        actual = actual->next;
+        actual = actual->getNext();
     }
     if (actual->getStudents()->getId() == id) {
         cout << "Estudiante Encontrado:" << endl;
@@ -64,16 +64,16 @@ NodeStudents *ManagerStudents::searchStudent(int id) {
 void ManagerStudents::deleteStudent(int id) {
     actual = header;
     if (actual != nullptr && actual->getStudents()->getId() == id) {
-     header = actual->next;
+     header = actual->getNext();
     } else if (actual != nullptr) {
-        while (actual->next != nullptr) {
+        while (actual->getNext() != nullptr) {
             if (actual->getNext()->getStudents()->getId() == id) {
                 NodeStudents *aux = new NodeStudents();
                 aux = actual->getNext();
                 actual->setNext(aux->getNext());
                 //delete aux;
             }
-            actual = actual->next;
+            actual = actual->getNext();
         }
     }
     cout << "Estudiante encontrado..." << endl;
@@ -88,7 +88,7 @@ void ManagerStudents::showList() {
         cout << "Name: " << actual->getStudents()->getName() << endl;
         cout << "ID: " << actual->getStudents()->getId() << endl;
         cout << "Major: " << actual->getStudents()->getMajor() << endl;
-        actual = actual->next;
+        actual = actual->getNext();
     }
 }
 

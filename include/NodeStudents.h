@@ -5,10 +5,11 @@
 using namespace std;
 
 struct NodeStudents{ //pasar a ListStudent
-public:
+private:
     //Atributos
     Student* student;
     NodeStudents* next;
+public:
     //Metodos
     NodeStudents();
     NodeStudents(Student*);

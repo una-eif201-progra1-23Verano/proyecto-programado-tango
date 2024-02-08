@@ -4,33 +4,36 @@
 
 #ifndef MAIN_MANAGERCOURSES_H
 #define MAIN_MANAGERCOURSES_H
-#include "Courses.h"
 #include <sstream>
-//hacer con vector
+//#include "Courses.h"
+#include "NodeCourses.h"
+
 using namespace std;
 
 class ManagerCourses {
-private:
-    Courses * courses; //course
-    int size;
-    int capacity;
 public:
     ManagerCourses();
-    ManagerCourses(int);
     ~ManagerCourses();
 
-    void setVectorCourses(Courses*);
-    void setSize(int);
-    void setCapacity(int);
+    void insertCourse(Courses* course);
+    string findByCode(string code);
+    void deleteByCode(string code);
+    string toString();
 
-    Courses* getVectorCourses();
-    int getSize();
-    int getCapacity();
 
-    void addCourse(Courses*);
-    void deleteCourse(int);
-    void showList();
+
+private:
+
+    NodeCourses* head;
+    NodeCourses* actual;
+public:
+    NodeCourses *getHead() const;
+
+    void setHead(NodeCourses *head);
+
+    NodeCourses *getActual() const;
+
+    void setActual(NodeCourses *actual);
+
 };
-
-
 #endif //MAIN_MANAGERCOURSES_H
