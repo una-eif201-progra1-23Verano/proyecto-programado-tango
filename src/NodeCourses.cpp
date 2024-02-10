@@ -6,7 +6,7 @@
 \param head is the head of the linked list.
 \param opt is the option to be inserted.
 */
-/*
+
 NodeCourses::NodeCourses(){
 courses=nullptr;
 next=nullptr;
@@ -49,4 +49,4 @@ void NodeCourses::handleOption(const std::string& opt) {
         std::cout << "Option 2 selected" << std::endl;
         // Implement option 2 functionality
     }
-}*/
+}

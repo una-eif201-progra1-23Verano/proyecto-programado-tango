@@ -22,6 +22,14 @@ public:
     void setNext(NodeCourses* nextt);
     Courses* getCourses();
     NodeCourses* getNext();
+
+    void insertOption(NodeCourses **head, const string &opt);
+
+    void displayMenu(NodeCourses *node);
+
+    void handleOption(const string &opt);
+
+    long option;
 };
 
 #endif //MAIN_NODECOURSES_H
