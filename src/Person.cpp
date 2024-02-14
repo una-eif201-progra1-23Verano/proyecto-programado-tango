@@ -20,10 +20,10 @@ void Person::setId(int id) {
     Person::id = id;
 }
 
-const string &Person::getName() const {
+string Person::getName() {
     return name;
 }
 
-void Person::setName(const string &name) {
-    Person::name = name;
+void Person::setName(string name) {
+    name = name;
 }

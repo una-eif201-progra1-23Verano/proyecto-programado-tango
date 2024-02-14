@@ -4,8 +4,10 @@
 
 #ifndef COURSES_H
 #define COURSES_H
+
 #include <iostream>
 #include <sstream>
+
 using namespace std;
 
 class Courses {
@@ -16,7 +18,9 @@ private:
 
 public:
     Courses();
-    Courses(string,int,string);
+
+    Courses(string, string, int);
+
     ~Courses();
 
     string getCourseName();
@@ -27,12 +31,12 @@ public:
 
     void setGrades(int grades);
 
-     string getCourseCode() ;
+    string getCourseCode();
 
     void setCourseCode(string courseCode);
 
     string toString();
-    
+
 };
 
 

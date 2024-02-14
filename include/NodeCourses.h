@@ -4,32 +4,31 @@
 
 #ifndef MAIN_NODECOURSES_H
 #define MAIN_NODECOURSES_H
+
 #include "Courses.h"
-#include <iostream>
+
 
 using namespace std;
 
-struct NodeCourses{
-public:
+struct NodeCourses {
+private:
     //Atributos
-    Courses* courses;
-    NodeCourses* next;
-    //Metodos
+    Courses *courses;
+    NodeCourses *next;
+public:
     NodeCourses();
-    NodeCourses(Courses*);
+
+    NodeCourses(Courses *);
+
     ~NodeCourses();
-    void setCourses(Courses* coursess);
-    void setNext(NodeCourses* nextt);
-    Courses* getCourses();
-    NodeCourses* getNext();
 
-    void insertOption(NodeCourses **head, const string &opt);
+    void setCourses(Courses *coursess);
 
-    void displayMenu(NodeCourses *node);
+    void setNext(NodeCourses *nextt);
 
-    void handleOption(const string &opt);
+    Courses *getCourses();
 
-    long option;
+    NodeCourses *getNext();
 };
 
 #endif //MAIN_NODECOURSES_H

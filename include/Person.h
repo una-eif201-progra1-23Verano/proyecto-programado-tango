@@ -4,10 +4,12 @@
 
 #ifndef MAIN_PERSON_H
 #define MAIN_PERSON_H
+
 #include <sstream>
 #include <iostream>
 
 using namespace std;
+
 class Person {
 protected:
     int id;
@@ -23,11 +25,11 @@ public:
 
     void setId(int id);
 
-    const string &getName() const;
+    string getName();
 
-    void setName(const string &name);
+    void setName(string name);
 
-    virtual const string toString()=0;
+    virtual const string toString() = 0;
 };
 
 

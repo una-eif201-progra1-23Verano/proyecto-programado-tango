@@ -45,6 +45,7 @@ void ManagerStudents::newStudent(NodeStudents *student) {
 
 NodeStudents *ManagerStudents::searchStudent(int id) {
     actual = header;
+    cout << endl;
     while (actual->getNext() != nullptr) {
         if (actual->getStudents()->getId() == id) {
             cout << "Estudiante Encontrado:" << endl;
@@ -55,23 +56,22 @@ NodeStudents *ManagerStudents::searchStudent(int id) {
     if (actual->getStudents()->getId() == id) {
         cout << "Estudiante Encontrado:" << endl;
         return actual;
-    } else{
-    cout << "Estudiante no encontrado..." << endl;
-    return nullptr;
-}
+    } else {
+        cout << "Estudiante no encontrado..." << endl;
+        return nullptr;
+    }
 }
 
 void ManagerStudents::deleteStudent(int id) {
     actual = header;
     if (actual != nullptr && actual->getStudents()->getId() == id) {
-     header = actual->getNext();
+        header = actual->getNext();
     } else if (actual != nullptr) {
         while (actual->getNext() != nullptr) {
             if (actual->getNext()->getStudents()->getId() == id) {
                 NodeStudents *aux = new NodeStudents();
                 aux = actual->getNext();
                 actual->setNext(aux->getNext());
-                //delete aux;
             }
             actual = actual->getNext();
         }
@@ -87,7 +87,11 @@ void ManagerStudents::showList() {
         cout << "Estudiante:" << endl;
         cout << "Name: " << actual->getStudents()->getName() << endl;
         cout << "ID: " << actual->getStudents()->getId() << endl;
-        cout << "Major: " << actual->getStudents()->getMajor() << endl;
+        cout << "Major: " << actual->getStudents()->getMajor() << endl << endl;
+        cout << "Cursos del estudiante" << endl;
+        for (int i = 0; i < actual->getStudents()->getTamano(); i++) {
+            cout << "     " << actual->getStudents()->vector[i]->getCourseName() << endl;
+        }
         actual = actual->getNext();
     }
 }

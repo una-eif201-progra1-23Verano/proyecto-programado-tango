@@ -4,29 +4,26 @@
 
 #ifndef MAIN_MANAGERCOURSES_H
 #define MAIN_MANAGERCOURSES_H
-#include <sstream>
-//#include "Courses.h"
+
 #include "NodeCourses.h"
+
 
 using namespace std;
 
 class ManagerCourses {
 public:
     ManagerCourses();
+
     ~ManagerCourses();
 
-    void insertCourse(Courses* course);
-    string findByCode(string code);
+    void newCourse(NodeCourses *course);
+
+    Courses *findByCode(string code);
+
+    string printByCode(string code);
+
     void deleteByCode(string code);
-    string toString();
 
-
-
-private:
-
-    NodeCourses* head;
-    NodeCourses* actual;
-public:
     NodeCourses *getHead() const;
 
     void setHead(NodeCourses *head);
@@ -35,5 +32,16 @@ public:
 
     void setActual(NodeCourses *actual);
 
+    NodeCourses *searchCourse(string);
+
+    void showList();
+
+
+private:
+
+    NodeCourses *head;
+    NodeCourses *actual;
+
 };
+
 #endif //MAIN_MANAGERCOURSES_H

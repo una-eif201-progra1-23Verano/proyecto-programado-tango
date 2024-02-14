@@ -1,30 +1,33 @@
 #include "NodeStudents.h"
-#include <iostream>
 
 
-NodeStudents::NodeStudents(){
-    student=nullptr;
-    next=nullptr;
+NodeStudents::NodeStudents() {
+    student = nullptr;
+    next = nullptr;
 }
 
-NodeStudents::~NodeStudents(){
-  delete student;
-  delete next;
-}
-NodeStudents::NodeStudents(Student* novo){
-    student=novo;
-    next=nullptr;
+NodeStudents::~NodeStudents() {
+    delete student;
+    delete next;
 }
 
-void NodeStudents::setStudents(Student* st){
-    student=st;
+NodeStudents::NodeStudents(Student *novo) {
+    student = novo;
+    next = nullptr;
 }
-void NodeStudents::setNext( NodeStudents* nextt){
-    next=nextt;
+
+void NodeStudents::setStudents(Student *st) {
+    student = st;
 }
-Student* NodeStudents::getStudents(){
+
+void NodeStudents::setNext(NodeStudents *nextt) {
+    next = nextt;
+}
+
+Student *NodeStudents::getStudents() {
     return student;
 }
-NodeStudents* NodeStudents::getNext(){
+
+NodeStudents *NodeStudents::getNext() {
     return next;
 }
