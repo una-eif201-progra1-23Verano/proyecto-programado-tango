@@ -1,52 +1,92 @@
-//
-// Created by Maikol Guzman on 22/11/23.
-//
-#include <iostream>
-#include <cstdlib>
+#include "Student.h"
+#include "Menu.h"
+#include "NodeStudents.h"
+#include "ManagerCourses.h"
+#include "ManagerStudents.h"
+#include "Manager.h"
 
-/*!
- * \mainpage Technical documentation of the example.
- * \section buildingproject Building the Project
- *
- * \subsection step1 Creating a Build Directory
- *
- * It's a good practice to do an out-of-source build. This keeps your build files separate from your source files.
- * \code{.sh}
- * mkdir build
- * cd build
- * \endcode
- * \subsection step2 Running CMake
- * From within the build directory, run CMake to generate the build system.
- *
- * \code{.sh}
- * cmake ..
- * \endcode
- *
- * \subsection step3 Compiling the Project
- * After CMake has done its job, you can use the generated build system to compile the project.
- *
- * \code{.sh}
- * make
- * \endcode
- * This will compile your project and generate an executable in the build directory.
- *
- * \section references References
- *
- * <a href="https://github.com/una-eif201-progra1-master/dev.funda.oop-inheritance">Github repository of the example</a>
- *
- * \date 2021-11-23
- * \author Maikol Guzman Alan
- * \copyright <a href="https://mikeguzman.dev/">mikeguzman.dev</a>
- *
- * \file main.cpp
- * \brief The main.cpp file contains the entry point of the program.
- */
+
+using namespace std;
 
 int main() {
-    system("clear");
-    std::cout << "Universidad Nacional de Costa Rica - www.mikeguzman.dev" << std::endl;
+    system("cls");
+    Manager *q1 = new Manager();
+    ManagerCourses *mc = new ManagerCourses();
+    ManagerStudents *ms = new ManagerStudents();
+
+    //region Data Quemada
+    /*
+    Student *s1 = new Student(1111, "Pedro Perez", "Educacion", 2);
+    Student *s2 = new Student(2222, "Juan Valdez", "Fisiologia", 2);
+    Student *s3 = new Student(3333, "Maria Morales", "Filosofia", 2);
+    Student *s4 = new Student(4444, "Ian Frazer", "Medicina", 2);
+    Student *s5 = new Student(5555, "Jaime Corrales", "psicologia", 2);
+    Student *s6 = new Student(6666, "Mauricio Hoffman", "Ing. Computacion", 2);
+    Student *s7 = new Student(7777, "Rodolfa", "Ecologia", 2);
+    Courses *c1 = new Courses("Medicina", "1111",4);
+    Courses *c2 = new Courses("Lectura", "2222",2);
+    Courses *c3 = new Courses("Ciencias", "3333",3);
+    Courses *c4 = new Courses("Ingles", "4444",3);
+    Courses *c5 = new Courses("Finanzas", "5555",4);
+
+    s1->insertarCursos(c2);
+    s1->insertarCursos(c3);
+
+    s2->insertarCursos(c2);
+    s2->insertarCursos(c4);
+
+    s3->insertarCursos(c2);
+    s3->insertarCursos(c5);
+
+    s4->insertarCursos(c1);
+    s4->insertarCursos(c3);
+
+    s5->insertarCursos(c2);
+    s5->insertarCursos(c3);
+
+    s6->insertarCursos(c4);
+    s6->insertarCursos(c5);
+
+    s7->insertarCursos(c4);
+    s7->insertarCursos(c3);
 
 
-    std::cout << std::endl;
+    NodeStudents *ns1 = new NodeStudents(s1);
+    NodeStudents *ns2 = new NodeStudents(s2);
+    NodeStudents *ns3 = new NodeStudents(s3);
+    NodeStudents *ns4 = new NodeStudents(s4);
+    NodeStudents *ns5 = new NodeStudents(s5);
+    NodeStudents *ns6 = new NodeStudents(s6);
+    NodeStudents *ns7 = new NodeStudents(s7);
+
+    NodeCourses *nc1 = new NodeCourses(c1);
+    NodeCourses *nc2 = new NodeCourses(c2);
+    NodeCourses *nc3 = new NodeCourses(c3);
+    NodeCourses *nc4 = new NodeCourses(c4);
+    NodeCourses *nc5 = new NodeCourses(c5);
+
+    ManagerCourses *mc = new ManagerCourses();
+    ManagerStudents *ms = new ManagerStudents();
+    ms->newStudent(ns1);
+    ms->newStudent(ns2);
+    ms->newStudent(ns3);
+    ms->newStudent(ns4);
+    ms->newStudent(ns5);
+    ms->newStudent(ns6);
+    ms->newStudent(ns7);
+
+    mc->newCourse(nc1);
+    mc->newCourse(nc2);
+    mc->newCourse(nc3);
+    mc->newCourse(nc4);
+    mc->newCourse(nc5);
+    */
+    //endregion
+
+    q1->lectura(mc,ms);
+    Menu *menu = new Menu(mc, ms);
+    menu->printHeader();
+    menu->handleUserInput();
+    q1->escritura(mc, ms);
     return 0;
 }
